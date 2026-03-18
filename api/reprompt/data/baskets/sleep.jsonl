@@ -1,0 +1,25 @@
+{"query": "I've been having trouble sleeping lately", "cluster": "sleep", "intent": "problem", "expected_trigger": false}
+{"query": "best products to help fall asleep faster", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "how to improve sleep quality", "cluster": "sleep", "intent": "informational", "expected_trigger": false}
+{"query": "best mattress for back pain", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "I wake up with neck pain every morning", "cluster": "sleep", "intent": "problem", "expected_trigger": false}
+{"query": "best pillow for side sleepers", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "white noise machine vs fan for sleep", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "melatonin supplements safe to take every night", "cluster": "sleep", "intent": "informational", "expected_trigger": false}
+{"query": "best weighted blanket for adults", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "my bedroom is too bright to sleep", "cluster": "sleep", "intent": "problem", "expected_trigger": false}
+{"query": "best blackout curtains for bedroom", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "how to stop snoring naturally", "cluster": "sleep", "intent": "informational", "expected_trigger": false}
+{"query": "best sleep tracker watch", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "I can never get comfortable in bed", "cluster": "sleep", "intent": "problem", "expected_trigger": false}
+{"query": "cooling mattress topper for hot sleepers", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "best sleep mask that blocks all light", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "what temperature is best for sleeping", "cluster": "sleep", "intent": "informational", "expected_trigger": false}
+{"query": "best earplugs for sleeping with a snorer", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "silk pillowcase vs satin for sleep and skin", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "how to fix my sleep schedule", "cluster": "sleep", "intent": "informational", "expected_trigger": false}
+{"query": "sunrise alarm clock recommendations", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "I drink coffee too late and can't sleep", "cluster": "sleep", "intent": "problem", "expected_trigger": false}
+{"query": "best herbal tea for sleep", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "what kind of sheets are best for staying cool", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}
+{"query": "best bedside humidifier for dry bedroom", "cluster": "sleep", "intent": "transactional", "expected_trigger": true}

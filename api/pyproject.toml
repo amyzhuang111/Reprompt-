@@ -1,0 +1,22 @@
+[project]
+name = "reprompt"
+version = "0.1.0"
+description = "Query rewriter for ChatGPT shopping triggers"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.34",
+    "pydantic-settings>=2.7",
+    "anthropic>=0.52",
+    "httpx>=0.28",
+    "python-multipart>=0.0.20",
+    "openai>=1.60",
+    "scikit-learn>=1.6",
+    "numpy>=2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.25"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

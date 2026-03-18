@@ -1,0 +1,25 @@
+{"query": "how do I organize my home office", "cluster": "productivity", "intent": "informational", "expected_trigger": false}
+{"query": "best desk organizer for small spaces", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "I keep losing track of my tasks", "cluster": "productivity", "intent": "problem", "expected_trigger": false}
+{"query": "best planner for busy professionals", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "how to be more productive working from home", "cluster": "productivity", "intent": "informational", "expected_trigger": false}
+{"query": "noise canceling headphones for focus", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "my desk is always cluttered", "cluster": "productivity", "intent": "problem", "expected_trigger": false}
+{"query": "cable management solutions for desk", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "best monitor for working from home", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "how to set up a dual monitor workspace", "cluster": "productivity", "intent": "informational", "expected_trigger": false}
+{"query": "ergonomic keyboard recommendations", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "best webcam for video calls", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "I get distracted easily when working at home", "cluster": "productivity", "intent": "problem", "expected_trigger": false}
+{"query": "best desk lamp for long work sessions", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "whiteboard vs corkboard for home office", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "how to create a morning routine for productivity", "cluster": "productivity", "intent": "informational", "expected_trigger": false}
+{"query": "best time management apps", "cluster": "productivity", "intent": "transactional", "expected_trigger": false}
+{"query": "standing desk converter recommendations", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "how to reduce screen fatigue", "cluster": "productivity", "intent": "informational", "expected_trigger": false}
+{"query": "best office chair under $300", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "my wrists hurt from typing all day", "cluster": "productivity", "intent": "problem", "expected_trigger": false}
+{"query": "best wrist rest for keyboard", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "how to make a small office feel bigger", "cluster": "productivity", "intent": "informational", "expected_trigger": false}
+{"query": "compact desk for tiny apartment office", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}
+{"query": "best bookshelf for home office storage", "cluster": "productivity", "intent": "transactional", "expected_trigger": true}

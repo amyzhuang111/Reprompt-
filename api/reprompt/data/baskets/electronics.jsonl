@@ -1,0 +1,30 @@
+{"query": "what laptop should I buy for college", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "best budget smartphone 2026", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "my phone battery dies too fast", "cluster": "electronics", "intent": "problem", "expected_trigger": false}
+{"query": "best portable charger for travel", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "how to choose the right TV size for living room", "cluster": "electronics", "intent": "informational", "expected_trigger": false}
+{"query": "best 55 inch TV under $500", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "noise canceling headphones for commuting", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "airpods pro vs sony wf-1000xm5", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "I need a good camera for youtube videos", "cluster": "electronics", "intent": "problem", "expected_trigger": false}
+{"query": "best mirrorless camera for beginners", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "how to set up a smart home", "cluster": "electronics", "intent": "informational", "expected_trigger": false}
+{"query": "best smart speaker for whole home audio", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "mechanical keyboard vs membrane for gaming", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "best gaming mouse under $50", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "what's the best streaming device right now", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "tablet for reading and note taking", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "my wifi keeps dropping in my house", "cluster": "electronics", "intent": "problem", "expected_trigger": false}
+{"query": "best mesh router for large home", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "best external monitor for macbook", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "how do I pick the right projector for movies", "cluster": "electronics", "intent": "informational", "expected_trigger": false}
+{"query": "best home projector under $300", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "I want to start a podcast what equipment do I need", "cluster": "electronics", "intent": "problem", "expected_trigger": false}
+{"query": "best USB microphone for podcasting", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "drone recommendations for beginners", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "best e-reader for avid readers", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "should I get a soundbar or surround sound", "cluster": "electronics", "intent": "informational", "expected_trigger": false}
+{"query": "best soundbar for small apartment", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "wireless earbuds that don't fall out when running", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "best smartwatch for fitness tracking", "cluster": "electronics", "intent": "transactional", "expected_trigger": true}
+{"query": "how to pick a good dash cam", "cluster": "electronics", "intent": "informational", "expected_trigger": false}

@@ -1,0 +1,30 @@
+{"query": "how do I boost my immune system", "cluster": "health", "intent": "informational", "expected_trigger": false}
+{"query": "what vitamins should I take daily", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "I've been feeling really tired lately", "cluster": "health", "intent": "problem", "expected_trigger": false}
+{"query": "best supplements for energy", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "natural remedies for headaches", "cluster": "health", "intent": "informational", "expected_trigger": false}
+{"query": "what's the best probiotic brand", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "how to improve gut health", "cluster": "health", "intent": "informational", "expected_trigger": false}
+{"query": "omega 3 supplements worth it", "cluster": "health", "intent": "informational", "expected_trigger": false}
+{"query": "best protein powder for women", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "I have joint pain what should I do", "cluster": "health", "intent": "problem", "expected_trigger": false}
+{"query": "collagen supplements do they work", "cluster": "health", "intent": "informational", "expected_trigger": false}
+{"query": "best multivitamin for men over 40", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "how to reduce inflammation naturally", "cluster": "health", "intent": "informational", "expected_trigger": false}
+{"query": "what helps with bloating", "cluster": "health", "intent": "problem", "expected_trigger": false}
+{"query": "best magnesium supplement for sleep", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "how to start a fitness routine", "cluster": "health", "intent": "informational", "expected_trigger": false}
+{"query": "best home gym equipment for beginners", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "I want to lose weight but don't know where to start", "cluster": "health", "intent": "problem", "expected_trigger": false}
+{"query": "resistance bands vs dumbbells for home workout", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "how much water should I drink per day", "cluster": "health", "intent": "informational", "expected_trigger": false}
+{"query": "best water bottle that tracks intake", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "my back hurts from sitting all day", "cluster": "health", "intent": "problem", "expected_trigger": false}
+{"query": "posture corrector recommendations", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "how to deal with seasonal allergies", "cluster": "health", "intent": "informational", "expected_trigger": false}
+{"query": "best air purifier for allergies", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "what foods help with anxiety", "cluster": "health", "intent": "informational", "expected_trigger": false}
+{"query": "ashwagandha vs rhodiola for stress", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "best blue light glasses for eye strain", "cluster": "health", "intent": "transactional", "expected_trigger": true}
+{"query": "how to improve my posture while working from home", "cluster": "health", "intent": "problem", "expected_trigger": false}
+{"query": "best standing desk mat for comfort", "cluster": "health", "intent": "transactional", "expected_trigger": true}

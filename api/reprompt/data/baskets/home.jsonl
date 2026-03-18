@@ -1,0 +1,25 @@
+{"query": "what's a good price for a couch", "cluster": "home", "intent": "informational", "expected_trigger": false}
+{"query": "best sectional sofa for family room", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "my kitchen is too small to cook in", "cluster": "home", "intent": "problem", "expected_trigger": false}
+{"query": "best kitchen organizers for small spaces", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "how to decorate a rental apartment", "cluster": "home", "intent": "informational", "expected_trigger": false}
+{"query": "best wall art for modern living room", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "my closet is a mess", "cluster": "home", "intent": "problem", "expected_trigger": false}
+{"query": "best closet organization system", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "what type of mattress is best for couples", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "best rug for high traffic areas", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "how to choose bathroom tiles", "cluster": "home", "intent": "informational", "expected_trigger": false}
+{"query": "best shower head for low water pressure", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "I need more storage in my bathroom", "cluster": "home", "intent": "problem", "expected_trigger": false}
+{"query": "best over toilet storage shelf", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "robot vacuum recommendations for pet hair", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "best air fryer for family of four", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "how to make a small bedroom feel bigger", "cluster": "home", "intent": "informational", "expected_trigger": false}
+{"query": "best space saving furniture for studio apartment", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "what curtains are best for insulation", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "my house smells musty what can I do", "cluster": "home", "intent": "problem", "expected_trigger": false}
+{"query": "best air purifier for musty basement", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "indoor plants that are hard to kill", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "best coffee maker for home barista", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "knife set recommendations for home cooking", "cluster": "home", "intent": "transactional", "expected_trigger": true}
+{"query": "how to childproof a living room on a budget", "cluster": "home", "intent": "informational", "expected_trigger": false}
