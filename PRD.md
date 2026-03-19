@@ -56,7 +56,7 @@ The problem compounds: only **18% of ChatGPT conversations trigger a web search 
 - Rewrite strategy applied (see below)
 - Predicted product categories that would surface
 - **Citation cluster prediction**: which trusted domains the rewrite is likely to co-cite alongside (e.g., "This rewrite lands in the NerdWallet + The Points Guy cluster")
-- **Turn 1 fitness**: boolean flag — is this rewrite optimized as a conversation opener? (Turn 1 = 12.6% citation rate vs 4.5% at turn 10)
+- **Turn 1 fitness**: boolean flag — is this rewrite optimized as a conversation opener? (Turn 1 = 12.6% citation rate vs 4.5% at turn 10)how 
 
 **Rewrite Strategies (applied combinatorially):**
 
