@@ -3,9 +3,9 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "Reprompt — Query Rewriter for ChatGPT Shopping Triggers",
+  title: "AEO Intelligence — See why they win. Fix yours.",
   description:
-    "Rewrite customer queries to trigger ChatGPT product recommendations. Built for AEO strategists.",
+    "Reverse-engineer why ChatGPT recommends your competitor. Optimize social posts for AI citation. Test if your queries trigger product recommendations. Built on Profound's research.",
 };
 
 export default function RootLayout({
