@@ -1,6 +1,6 @@
 // Category-driven scoring system
-// Based on Profound's March 2026 research: shopping triggers are CATEGORY-driven,
-// not intent-driven. Their 4-gate decision tree achieves 95-96% accuracy.
+// Based on AEO research: shopping triggers are CATEGORY-driven,
+// not intent-driven. The 4-gate decision tree achieves 95-96% accuracy.
 
 // ---------------------------------------------------------------------------
 // 1. Category definitions with base trigger rates and keyword lists
@@ -431,7 +431,7 @@ export function scoreQuery(query: string): ScoreBreakdown {
     score += 20;
   }
 
-  // Problem-to-product patterns (Profound: health 47%, productivity 42%, sleep 41% unsolicited rec rates)
+  // Problem-to-product patterns (research: health 47%, productivity 42%, sleep 41% unsolicited rec rates)
   const problemPatterns = /\b(can't sleep|trouble sleeping|back pain|sore|tired|exhausted|organize|messy|noisy|loud|uncomfortable|sweating|hot sleeper|cold feet|dry skin|acne|hair loss|snoring)\b/i;
   if (problemPatterns.test(query) && baseRate > 0) {
     score += 15;

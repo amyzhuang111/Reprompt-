@@ -6,7 +6,7 @@
 
 ## 1. Problem Statement
 
-ChatGPT is rapidly evolving from an answer engine into a storefront. Between September 2025 and January 2026, unsolicited product recommendations grew from 15% to 28% of responses (Profound research, 100k prompts). Yet **79% of prompts never trigger shopping results**, and only ~6% trigger reliably.
+ChatGPT is rapidly evolving from an answer engine into a storefront. Between September 2025 and January 2026, unsolicited product recommendations grew from 15% to 28% of responses (based on published research across 100k prompts). Yet **79% of prompts never trigger shopping results**, and only ~6% trigger reliably.
 
 Marketers have no way to systematically understand *which phrasings* of their customers' queries will surface product cards vs. which will get a text-only answer. The gap between "What's a good dining room set?" (triggers shopping) and "What's the typical price range for a dining room set that seats six?" (informational — yet ChatGPT still inserts product cards) is subtle and unpredictable.
 
@@ -20,7 +20,6 @@ The problem compounds: only **18% of ChatGPT conversations trigger a web search 
 
 - **AEO/GEO strategists** at e-commerce brands who need to understand the query surface area that drives product recommendations
 - **Content marketers** optimizing landing pages and product descriptions for AI discoverability
-- **Profound's internal research team** (dog-fooding) to expand Shopping Analysis capabilities
 
 ---
 
@@ -28,20 +27,20 @@ The problem compounds: only **18% of ChatGPT conversations trigger a web search 
 
 | Insight | Source | Implication |
 |---|---|---|
-| Open-ended, preference-driven prompts trigger shopping at **12.1%** — 4x the rate of brand-direct queries | Profound 2M prompt study | Rewriter should steer toward preference/use-case framing, not brand mentions |
+| Open-ended, preference-driven prompts trigger shopping at **12.1%** — 4x the rate of brand-direct queries | Industry research, 2M prompt study | Rewriter should steer toward preference/use-case framing, not brand mentions |
 | Shopping query fan-outs avg **7 words** (vs 12 for normal search fan-outs) | Search Engine Land | Rephrased queries should be concise and product-specific |
-| Prompts that reliably trigger describe a **specific, shippable product need** with enough detail to match a real SKU | Profound | Rewriter must inject specificity: material, use-case, size, price range |
-| **83% of carousel products** come from Google Shopping top 40 organic results | Profound/SEL reverse-engineering study | We can use Google Shopping API as a proxy signal for what ChatGPT would surface |
-| Health (47%), productivity (42%), sleep (41%) queries have highest unsolicited rec rates | Profound 10k conversation study | Problem-solution framing is a high-value rewrite strategy |
+| Prompts that reliably trigger describe a **specific, shippable product need** with enough detail to match a real SKU | Industry research | Rewriter must inject specificity: material, use-case, size, price range |
+| **83% of carousel products** come from Google Shopping top 40 organic results | Industry/SEL reverse-engineering study | We can use Google Shopping API as a proxy signal for what ChatGPT would surface |
+| Health (47%), productivity (42%), sleep (41%) queries have highest unsolicited rec rates | Industry research, 10k conversation study | Problem-solution framing is a high-value rewrite strategy |
 | No public API exposes ChatGPT shopping results | OpenAI Developer Community | Must build evaluation pipeline using proxy signals + optional browser automation |
-| LinkedIn jumped from #11 → #5 on ChatGPT in 3 months; user-generated content (posts/articles) grew from 27% → 35% of citations | Profound LinkedIn study | Content type matters — rewrites should consider what *type* of content (UGC, editorial, product pages) the AI is likely to cite alongside product cards |
-| Profound uses **synthetic prompt baskets** (curated, repeatable query sets) tested across 6 AI platforms alongside organic prompt tracking with 7-day rolling averages | Profound methodology | Our eval pipeline should mirror this: controlled baskets for benchmarking + organic tracking for drift detection |
-| Cross-platform consistency matters — LinkedIn ranked #1 across all 6 AI platforms for professional queries, not just ChatGPT | Profound multi-engine analysis | Rewrites should be tested multi-platform; a rewrite that triggers shopping across ChatGPT + Gemini + Perplexity is more robust |
-| Only **18% of ChatGPT conversations** trigger a web search at all; rate held steady Oct–Dec 2025 | Profound citation sources study (730k conversations) | Shopping triggers are a subset of the 18% that trigger search — rewriting must first cross the "search trigger" threshold before shopping can activate |
-| **Turn 1 is 2.5x more likely** to trigger citations than turn 10, and 4x more likely than turn 20 (12.6% → 4.5% → 3.0%) | Profound citation sources study | Rewrites should be optimized as **conversation openers** — the first message is prime real estate for product discovery |
-| Sources travel in packs: **co-citation clusters** form by vertical (NerdWallet + The Points Guy at 14%, The Verge + TechRadar at 10%) | Profound co-citation analysis | Rewrites that trigger queries landing in established co-citation clusters are more likely to surface products alongside trusted sources |
-| Citation distribution has a **Gini coefficient of 0.8** — top 10 domains capture only 12% of all citations; long tail is massive | Profound citation sources study | Opportunity for niche/specialist brands: the playing field is more open than Google's where top results dominate |
-| ~6 unique citations per conversation, ~4 per turn; ChatGPT cites competitors side by side (source triangulation) | Profound citation sources study | Rewrites should aim to land the brand in a **multi-source citation set**, not as sole authority — frame queries to invite comparison |
+| LinkedIn jumped from #11 → #5 on ChatGPT in 3 months; user-generated content (posts/articles) grew from 27% → 35% of citations | Published LinkedIn citation study | Content type matters — rewrites should consider what *type* of content (UGC, editorial, product pages) the AI is likely to cite alongside product cards |
+| Effective evaluation uses **synthetic prompt baskets** (curated, repeatable query sets) tested across 6 AI platforms alongside organic prompt tracking with 7-day rolling averages | Established AEO methodology | Our eval pipeline should mirror this: controlled baskets for benchmarking + organic tracking for drift detection |
+| Cross-platform consistency matters — LinkedIn ranked #1 across all 6 AI platforms for professional queries, not just ChatGPT | Multi-engine analysis | Rewrites should be tested multi-platform; a rewrite that triggers shopping across ChatGPT + Gemini + Perplexity is more robust |
+| Only **18% of ChatGPT conversations** trigger a web search at all; rate held steady Oct–Dec 2025 | Citation sources study (730k conversations) | Shopping triggers are a subset of the 18% that trigger search — rewriting must first cross the "search trigger" threshold before shopping can activate |
+| **Turn 1 is 2.5x more likely** to trigger citations than turn 10, and 4x more likely than turn 20 (12.6% → 4.5% → 3.0%) | Citation sources study | Rewrites should be optimized as **conversation openers** — the first message is prime real estate for product discovery |
+| Sources travel in packs: **co-citation clusters** form by vertical (NerdWallet + The Points Guy at 14%, The Verge + TechRadar at 10%) | Co-citation analysis | Rewrites that trigger queries landing in established co-citation clusters are more likely to surface products alongside trusted sources |
+| Citation distribution has a **Gini coefficient of 0.8** — top 10 domains capture only 12% of all citations; long tail is massive | Citation sources study | Opportunity for niche/specialist brands: the playing field is more open than Google's where top results dominate |
+| ~6 unique citations per conversation, ~4 per turn; ChatGPT cites competitors side by side (source triangulation) | Citation sources study | Rewrites should aim to land the brand in a **multi-source citation set**, not as sole authority — frame queries to invite comparison |
 
 ---
 
@@ -56,7 +55,7 @@ The problem compounds: only **18% of ChatGPT conversations trigger a web search 
 - Rewrite strategy applied (see below)
 - Predicted product categories that would surface
 - **Citation cluster prediction**: which trusted domains the rewrite is likely to co-cite alongside (e.g., "This rewrite lands in the NerdWallet + The Points Guy cluster")
-- **Turn 1 fitness**: boolean flag — is this rewrite optimized as a conversation opener? (Turn 1 = 12.6% citation rate vs 4.5% at turn 10)how 
+- **Turn 1 fitness**: boolean flag — is this rewrite optimized as a conversation opener? (Turn 1 = 12.6% citation rate vs 4.5% at turn 10)how
 
 **Rewrite Strategies (applied combinatorially):**
 
@@ -82,22 +81,22 @@ A classification model that estimates the probability a query will trigger ChatG
 
 **Architecture:** Lightweight classifier (fine-tuned DeBERTa or distilled model) trained on a labeled dataset of queries with known shopping trigger outcomes. Falls back to LLM-based scoring for cold-start.
 
-### 4.3 Evaluation Pipeline (Inspired by Profound's Dual-Source Methodology)
+### 4.3 Evaluation Pipeline (Dual-Source Methodology)
 
-Profound's LinkedIn citation study used two complementary approaches: (1) organic real-user prompt tracking across millions of queries with 7-day rolling averages, and (2) synthetic prompt baskets — curated, repeatable query sets tested across 6 AI platforms (ChatGPT, Gemini, Google AI Overviews, AI Mode, Copilot, Perplexity) to measure citation behavior in a controlled way. We adopt the same dual-source philosophy:
+Published citation research has demonstrated the value of two complementary approaches: (1) organic real-user prompt tracking across millions of queries with 7-day rolling averages, and (2) synthetic prompt baskets — curated, repeatable query sets tested across 6 AI platforms (ChatGPT, Gemini, Google AI Overviews, AI Mode, Copilot, Perplexity) to measure citation behavior in a controlled way. We adopt the same dual-source philosophy:
 
 **Source A — Synthetic Prompt Baskets (Controlled Measurement)**
 
 Curated baskets of prompts organized by **topic cluster** (e.g., home & furniture, health & wellness, electronics, fitness, food & kitchen) tested systematically across AI platforms. Each basket contains:
 - 20-50 prompts per cluster, spanning informational → transactional intent spectrum
 - Original phrasing + Reprompt-generated rewrites for A/B comparison
-- Tested across ChatGPT, Gemini, and Perplexity (multi-platform, matching Profound's cross-engine approach)
+- Tested across ChatGPT, Gemini, and Perplexity (multi-platform, matching the cross-engine approach used in industry research)
 
 This gives us **structured, repeatable measurement** — we can re-run the same basket weekly to track whether rewrites maintain their shopping-trigger effectiveness as AI platforms evolve.
 
 **Source B — Organic Query Tracking (Real-World Signal)**
 
-Log all queries processed through Reprompt and track outcomes over time using 7-day rolling averages (same cadence as Profound's domain rank tracking). This captures:
+Log all queries processed through Reprompt and track outcomes over time using 7-day rolling averages (a proven cadence for domain rank tracking). This captures:
 - Which rewrite strategies produce the highest trigger rates in practice
 - Drift detection: do strategies that worked last month still work?
 - Category-level trends (e.g., health queries may respond differently to rewrites than electronics)
@@ -106,13 +105,13 @@ Log all queries processed through Reprompt and track outcomes over time using 7-
 
 1. **Google Shopping Proxy**: Query Google Shopping API / SerpApi with the rewritten prompt. If structured product results come back → high proxy score. (83% of ChatGPT carousel items come from Google Shopping.)
 2. **Fan-Out Simulation**: Generate the ~1.16 shopping fan-out queries that ChatGPT would produce (7-word product-specific variants), then check Google Shopping coverage.
-3. **Multi-Platform Citation Check**: Following Profound's methodology, test rewrites across multiple AI platforms — not just ChatGPT. A query that triggers shopping on ChatGPT *and* product citations on Perplexity/Gemini is a stronger signal than one that only works on ChatGPT.
+3. **Multi-Platform Citation Check**: Following established AEO methodology, test rewrites across multiple AI platforms — not just ChatGPT. A query that triggers shopping on ChatGPT *and* product citations on Perplexity/Gemini is a stronger signal than one that only works on ChatGPT.
 4. **Optional Browser Validation**: Playwright-based headless validation against chatgpt.com for ground-truth labeling (batch, not real-time). Used to build training data, not in the hot path.
 
 ### 4.4 Dashboard / API
 
 - **Web UI**: Paste a query → see ranked rewrites with scores and predicted product categories
-- **REST API**: `POST /rewrite` with query → returns scored variants (for integration into Profound's platform or customer workflows)
+- **REST API**: `POST /rewrite` with query → returns scored variants (for integration into customer workflows)
 - **Batch mode**: Upload CSV of queries → get back scored rewrites for each
 
 ---
@@ -194,7 +193,6 @@ For the interview project, scope to a **working vertical slice**:
 - 7-day rolling average dashboards (MVP logs data but doesn't chart trends)
 - User accounts / auth
 - Production deployment / scaling
-- Integration with Profound's existing platform
 
 ---
 
@@ -305,7 +303,7 @@ score = (
 
 **Citation Cluster Score (0-100):**
 
-Based on Profound's finding that sources travel in packs (Gini 0.8, ~4 citations/turn):
+Based on the finding that sources travel in packs (Gini 0.8, ~4 citations/turn):
 - Query maps to a known high-co-citation vertical (finance, tech, health, travel) → +40
 - Comparison/review language present ("compared", "vs", "top rated") → +30 (invites multi-source triangulation)
 - Query specificity sufficient to match editorial/review content, not just Wikipedia → +30
@@ -313,7 +311,7 @@ Based on Profound's finding that sources travel in packs (Gini 0.8, ~4 citations
 
 **Turn 1 Fitness Score (0-100):**
 
-Based on Profound's finding that Turn 1 has 12.6% citation rate (2.5x Turn 10):
+Based on the finding that Turn 1 has 12.6% citation rate (2.5x Turn 10):
 - Factual grounding pattern ("what are the best...", "which X is...") → +40 (demands web search)
 - Self-contained question (no references to prior context like "that one" or "the above") → +30
 - Research-journey initiator (broad enough to open exploration, specific enough to trigger search) → +30
@@ -377,13 +375,13 @@ Original query: "{query}"
 | **Turn 1 fitness rate** | 90%+ of top rewrites flagged as Turn 1 optimized | Heuristic check |
 | **Citation cluster coverage** | 70%+ of rewrites map to a known co-citation vertical | Cluster classifier |
 | **Cross-platform consistency** | Top rewrite triggers shopping on 2+ AI platforms | Multi-platform basket test |
-| **Temporal stability** | Score drift <10% over 7-day rolling window | Weekly basket re-runs (Profound methodology) |
+| **Temporal stability** | Score drift <10% over 7-day rolling window | Weekly basket re-runs |
 
 ---
 
-## 11. Citation Dynamics Model (Inspired by Profound's Citation Sources Study)
+## 11. Citation Dynamics Model (Based on Large-Scale Citation Research)
 
-Profound's analysis of 730k ChatGPT conversations revealed a citation ecosystem with clear structure. Reprompt uses these dynamics as a scoring and strategy layer.
+Analysis of 730k ChatGPT conversations has revealed a citation ecosystem with clear structure. Reprompt uses these dynamics as a scoring and strategy layer.
 
 ### The Citation Funnel
 
@@ -409,7 +407,7 @@ This means Reprompt's highest-value output is the **Turn 1 rewrite** — the ver
 
 ### Co-Citation Cluster Map (MVP)
 
-Based on Profound's co-citation pair analysis, we maintain a lightweight lookup of known verticals and their dominant co-citation partners:
+Based on co-citation pair analysis from published research, we maintain a lightweight lookup of known verticals and their dominant co-citation partners:
 
 | Vertical | Top Co-Citation Pair | Co-Citation Rate | Cluster Domains |
 |---|---|---|---|
@@ -430,9 +428,9 @@ With a Gini coefficient of 0.8 and top 10 domains capturing only 12% of citation
 
 ---
 
-## 12. Prompt Basket Framework (Inspired by Profound's LinkedIn Citation Methodology)
+## 12. Prompt Basket Framework (Based on Synthetic Prompt Basket Methodology)
 
-Profound's LinkedIn citation study demonstrated the power of **synthetic prompt baskets** — curated query sets designed to represent real user behavior, tested repeatedly across platforms for structured measurement. Reprompt adopts this as a first-class feature.
+Published citation research has demonstrated the power of **synthetic prompt baskets** — curated query sets designed to represent real user behavior, tested repeatedly across platforms for structured measurement. Reprompt adopts this as a first-class feature.
 
 ### Basket Structure
 
@@ -456,7 +454,7 @@ Each basket is a JSONL file:
 
 ### Basket Test Cycle
 
-Following Profound's 7-day rolling average approach:
+Following the 7-day rolling average approach used in industry research:
 
 1. **Run basket** through Reprompt → generate rewrites for each prompt
 2. **Score both originals and rewrites** using the trigger scorer
@@ -466,10 +464,9 @@ Following Profound's 7-day rolling average approach:
 
 ### Why This Matters
 
-This mirrors exactly how Profound conducts its own research — they don't just track organic behavior, they maintain controlled synthetic baskets for repeatable, comparable measurement. Building this into Reprompt shows:
-- Deep understanding of Profound's research methodology
+This approach mirrors best practices in AEO research — combining controlled synthetic baskets for repeatable, comparable measurement with organic tracking for real-world signal. Building this into Reprompt shows:
 - The tool isn't just a one-shot rewriter — it's a **measurement framework** for ongoing AEO optimization
-- Natural integration point with Profound's Prompt Volumes and Shopping Analysis products
+- Deep understanding of how citation and shopping behavior is measured at scale
 
 ---
 
@@ -485,7 +482,7 @@ This mirrors exactly how Profound conducts its own research — they don't just 
    - Top rewrite: "best mid-range sofa under $1000 for small apartment" → score **91**
 4. **Show prompt basket**: Run the "Sleep" basket (25 prompts) → show before/after trigger scores across the cluster. Highlight that 41% of sleep queries already get unsolicited recs, and Reprompt pushes that even higher with targeted rewrites.
 5. **Show batch mode**: Upload 20 queries from a mattress brand → export CSV showing which customer queries are closest to triggering shopping and how to optimize content around them
-6. **Talk methodology**: "This evaluation approach mirrors Profound's own research — synthetic prompt baskets for controlled measurement, tested across platforms, tracked over time with rolling averages. The same framework that produced the LinkedIn citation study and the 100k shopping prompt analysis."
+6. **Talk methodology**: "This evaluation approach mirrors best practices in AEO research — synthetic prompt baskets for controlled measurement, tested across platforms, tracked over time with rolling averages. The same framework that produced the LinkedIn citation study and the 100k shopping prompt analysis."
 7. **Show citation cluster insight**: For a finance query, show how the rewrite targets the NerdWallet + Points Guy co-citation cluster (14% co-citation rate). "Your brand doesn't need to beat Wikipedia — it needs to appear alongside these trusted co-citation partners. Only 18% of conversations trigger search, but when they do, ChatGPT cites ~4 sources per turn. Reprompt gets you into that set."
 8. **Explain the "why"**: Connect back to Jasman's blog post — this tool helps marketers get into the room where "intent is being manufactured out of thin air." And connect to the citation sources research: "The citation distribution has a Gini of 0.8 — it's wide but shallow. Top 10 domains only capture 12%. The long tail is the game, and Reprompt helps brands find their lane."
 
@@ -504,18 +501,18 @@ This mirrors exactly how Profound conducts its own research — they don't just 
 
 ---
 
-## 15. Why This Matters for Profound
+## 15. Strategic Value
 
-This tool directly extends Profound's **Shopping Analysis** and **Citation Intelligence** products:
+This tool adds **predictive and generative capability** to existing AEO analytics:
 
-- **Current state**: Profound tracks which products appear in AI shopping results and which domains get cited
-- **This adds**: Predictive + generative capability — given a query, *predict* whether it will trigger shopping, *generate* optimized variants that will, and *map* which co-citation clusters the brand will land in
-- **Strategic fit**: Moves Profound from read-only analytics ("here's what happened") to read-write optimization ("here's how to make it happen") — exactly their stated vision
+- **Current state**: Industry tools track which products appear in AI shopping results and which domains get cited
+- **This adds**: Given a query, *predict* whether it will trigger shopping, *generate* optimized variants that will, and *map* which co-citation clusters the brand will land in
+- **Strategic fit**: Moves from read-only analytics ("here's what happened") to read-write optimization ("here's how to make it happen")
 - **Data flywheel**: Every query processed generates training data for a future fine-tuned classifier, improving accuracy over time
-- **Bridges two research streams**: Connects the shopping trigger research (100k prompts, 2M prompt study) with the citation dynamics research (730k conversations) — shopping triggers don't exist in isolation, they happen within the broader citation ecosystem
+- **Bridges two research streams**: Connects shopping trigger research (100k prompts, 2M prompt study) with citation dynamics research (730k conversations) — shopping triggers don't exist in isolation, they happen within the broader citation ecosystem
 
 The unsolicited recommendation trend (15% → 28% and growing) means the surface area for product discovery in AI is expanding fast. Combined with the citation dynamics (18% search trigger rate, Gini 0.8, Turn 1 prime real estate), brands that can systematically map their customer queries to shopping-triggering phrasings *and* position themselves within the right co-citation clusters will capture disproportionate share of this new channel.
 
 ---
 
-*Built as an interview project demonstrating understanding of Profound's AEO platform, ChatGPT shopping mechanics, and the growing unsolicited recommendation opportunity.*
+*Built as a project demonstrating understanding of AEO mechanics, ChatGPT shopping behavior, and the growing unsolicited recommendation opportunity.*

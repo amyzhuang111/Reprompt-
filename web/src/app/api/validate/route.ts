@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   const breakdown = scoreQuery(query);
 
-  // Profound's shopping trigger methodology:
+  // Shopping trigger methodology:
   // "If the prompt's main noun is something you could buy on Amazon, Shopping is likely to appear"
   // Category-driven, not intent-driven. 95-97% accuracy.
   const amazonTest = breakdown.category !== "none" &&
@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
     breakdown.category !== "financial" &&
     breakdown.category !== "travel";
   const hasConstraints = /\b(under|over|around|best|for|with)\b.*\b(\$\d|price|budget|cheap|specific)/i.test(query);
-  const profoundPrediction = amazonTest ? (hasConstraints ? "very_likely" : "likely") : "unlikely";
+  const shoppingPrediction = amazonTest ? (hasConstraints ? "very_likely" : "likely") : "unlikely";
 
   // Step 1: Send query to ChatGPT with web search
   // We send TWO messages: the original query, then a follow-up asking for product recommendations.
@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Second: probe for products (simulating ChatGPT Shopping behavior)
-    // Profound found that ChatGPT inserts product cards even in informational responses
+    // ChatGPT inserts product cards even in informational responses
     const shoppingProbe = await client.responses.create({
       model: "gpt-4o-mini",
       tools: [{ type: "web_search_preview" as const }],
@@ -171,8 +171,8 @@ What specific products would you recommend? Include brand names, model names, ap
     shopping_products: shoppingProductNames,
     confidence,
     trigger_score: triggerScore,
-    // Profound's methodology
-    profound_prediction: profoundPrediction,
+    // Shopping prediction methodology
+    shopping_prediction: shoppingPrediction,
     amazon_test: amazonTest,
     has_constraints: hasConstraints,
     detected_category: breakdown.category,

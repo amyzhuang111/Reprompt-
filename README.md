@@ -1,6 +1,6 @@
 # Reprompt
 
-Query rewriter that optimizes customer queries to trigger ChatGPT's shopping/product recommendation behavior. Built as an interview project for Profound.
+Query rewriter that optimizes customer queries to trigger ChatGPT's shopping/product recommendation behavior.
 
 ## Quick Start
 

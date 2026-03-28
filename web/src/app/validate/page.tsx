@@ -18,7 +18,7 @@ interface ValidationResult {
   shopping_products: string[];
   confidence: number;
   trigger_score: number;
-  profound_prediction: string;
+  shopping_prediction: string;
   amazon_test: boolean;
   has_constraints: boolean;
   detected_category: string;
@@ -170,22 +170,22 @@ export default function ValidatePage() {
               <div className="text-center">
                 <p className="text-[10px] uppercase tracking-widest text-[var(--color-text-muted)]">Shopping Prediction</p>
                 <p className="text-[16px] font-bold mt-1" style={{
-                  color: result.profound_prediction === "very_likely" ? "var(--color-score-high)"
-                    : result.profound_prediction === "likely" ? "var(--color-score-mid)"
+                  color: result.shopping_prediction === "very_likely" ? "var(--color-score-high)"
+                    : result.shopping_prediction === "likely" ? "var(--color-score-mid)"
                     : "var(--color-score-low)"
                 }}>
-                  {result.profound_prediction === "very_likely" ? "Very Likely"
-                    : result.profound_prediction === "likely" ? "Likely"
+                  {result.shopping_prediction === "very_likely" ? "Very Likely"
+                    : result.shopping_prediction === "likely" ? "Likely"
                     : "Unlikely"}
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Profound's Shopping Trigger Decision Tree */}
+          {/* Shopping Trigger Decision Tree */}
           <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4 space-y-3">
             <p className="text-[10px] font-medium uppercase tracking-widest text-[var(--color-text-muted)]">
-              Profound&apos;s Shopping Trigger Decision Tree (95-97% accuracy)
+              Shopping Trigger Decision Tree (95-97% accuracy)
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-3">
@@ -218,7 +218,7 @@ export default function ValidatePage() {
               </div>
             </div>
             <p className="text-[10px] text-[var(--color-text-muted)]/60 italic">
-              Source: Profound &mdash; &ldquo;If the prompt&apos;s main noun is something you could buy on Amazon, Shopping is likely to appear. Adding 1-2 concrete constraints increases trigger probability.&rdquo; 95-97% accuracy on 7,500-prompt labeled sample.
+              Based on published research: &ldquo;If the prompt&apos;s main noun is something you could buy on Amazon, Shopping is likely to appear. Adding 1-2 concrete constraints increases trigger probability.&rdquo; 95-97% accuracy on 7,500-prompt labeled sample.
             </p>
           </div>
 

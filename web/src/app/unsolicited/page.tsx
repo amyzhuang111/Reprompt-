@@ -249,7 +249,7 @@ export default function UnsolicitedPage() {
               </div>
             </div>
             <p className="text-[11px] text-[var(--color-text-muted)] mt-4">
-              Profound&apos;s benchmark: unsolicited recs grew from 15% to 28% overall (Sep 2025 → Jan 2026, per their LinkedIn research on 100k shopping prompts)
+              Industry benchmark: unsolicited recs grew from 15% to 28% overall (Sep 2025 → Jan 2026, per published research on 100k shopping prompts)
             </p>
           </div>
 
@@ -367,7 +367,7 @@ export default function UnsolicitedPage() {
               <p className="text-[12px] leading-relaxed text-[var(--color-text-muted)]">
                 Generated {measurement.total_queries} informational queries about &ldquo;{category}&rdquo; — queries where the user is NOT shopping.
                 Sent each to ChatGPT (gpt-4o-mini with web_search_preview). Analyzed each response to detect if ChatGPT inserted product
-                recommendations the user didn&apos;t ask for. Rate = triggered / total. This mirrors Profound&apos;s methodology of testing prompt baskets
+                recommendations the user didn&apos;t ask for. Rate = triggered / total. This mirrors established methodology of testing prompt baskets
                 to measure AI behavior at the category level.
               </p>
             </div>
@@ -380,8 +380,8 @@ export default function UnsolicitedPage() {
         <div className="mx-auto max-w-3xl rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)] p-4 space-y-2">
           <p className="text-[10px] font-medium uppercase tracking-widest text-[var(--color-text-muted)]">How this works</p>
           <p className="text-[12px] leading-relaxed text-[var(--color-text-muted)]">
-            Profound found that ChatGPT inserts product recommendations into informational answers at increasing rates
-            (their LinkedIn research on 100k shopping prompts). This tool measures the actual rate for YOUR category by
+            Published research shows that ChatGPT inserts product recommendations into informational answers at increasing rates
+            (based on analysis of 100k shopping prompts). This tool measures the actual rate for YOUR category by
             sending 15 informational queries to ChatGPT and counting how many responses include unsolicited product recommendations.
             Real data, not estimates.
           </p>

@@ -398,7 +398,7 @@ export default function SocialAuditPage() {
           {result.cross_platform && (
             <div className="space-y-2">
               <p className="text-[10px] font-medium uppercase tracking-widest text-[var(--color-text-muted)]">
-                Cross-platform relevance (based on Profound&apos;s platform citation data)
+                Cross-platform relevance (based on published platform citation data)
               </p>
               <div className="grid grid-cols-3 gap-3">
                 {(["chatgpt", "gemini", "perplexity"] as const).map((p) => {
@@ -442,7 +442,7 @@ export default function SocialAuditPage() {
               {PLATFORM_CONFIG[result.platform].research}
             </p>
             <p className="text-[11px] text-[var(--color-text-muted)]/60">
-              Source: Jasman Singh / Profound &mdash; analysis of 400M+ real AI conversations
+              Source: Published research &mdash; analysis of 400M+ real AI conversations
             </p>
           </div>
         </div>

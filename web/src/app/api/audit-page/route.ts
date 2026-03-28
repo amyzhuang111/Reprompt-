@@ -26,7 +26,7 @@ function detectSignals(html: string, text: string) {
     tables: (html.match(/<table[\s>]/gi) || []).length,
     questions: (text.match(/\?/g) || []).length,
 
-    // Query fanout terms (Profound: LLMs inject "best", "top", "reviews", year into searches)
+    // Query fanout terms (research: LLMs inject "best", "top", "reviews", year into searches)
     has_best: /\bbest\b/i.test(text),
     has_top: /\btop\b/i.test(text),
     has_reviews: /\breview/i.test(text),
@@ -54,21 +54,21 @@ function detectSignals(html: string, text: string) {
   };
 }
 
-const AUDIT_PROMPT = `You are an AI Search expert scoring a page using Profound's AEO Content Score framework.
+const AUDIT_PROMPT = `You are an AI Search expert scoring a page using the AEO Content Score framework.
 
-Profound's AEO Content Score uses ML trained on millions of top-cited pages. You cannot replicate that model, but you CAN evaluate these 5 dimensions using the same criteria Profound published:
+The AEO Content Score uses ML trained on millions of top-cited pages. You cannot replicate that model, but you CAN evaluate these 5 dimensions using the same published criteria:
 
 1. SEMANTIC ALIGNMENT: "between the page's core content and prompts you want to optimize" — does this content match how real users would ask AI about this topic?
 
-2. STRUCTURED DATA USAGE: Profound found "certain JSON schemas (like FAQ) are favored over generic article schemas" — check the detected signals below.
+2. STRUCTURED DATA USAGE: Research found "certain JSON schemas (like FAQ) are favored over generic article schemas" — check the detected signals below.
 
-3. CONTENT STRUCTURE: Profound measures "heading density, paragraph balance, title length" — check the detected signals below.
+3. CONTENT STRUCTURE: AEO research measures "heading density, paragraph balance, title length" — check the detected signals below.
 
-4. QUERY FANOUT PATTERNS: Profound found LLMs inject "best", "top", "reviews", year references into their web searches. Does this content contain these terms?
+4. QUERY FANOUT PATTERNS: Research found LLMs inject "best", "top", "reviews", year references into their web searches. Does this content contain these terms?
 
-5. RECENCY & FRESHNESS: Profound emphasizes "content remains relevant to fast-evolving AI systems" — check the detected signals below.
+5. RECENCY & FRESHNESS: AEO research emphasizes "content remains relevant to fast-evolving AI systems" — check the detected signals below.
 
-IMPORTANT: You are scoring based on Profound's published criteria. Do NOT invent your own criteria.
+IMPORTANT: You are scoring based on published AEO criteria. Do NOT invent your own criteria.
 
 You have REAL detected signals from the page (these are factual counts, not estimates):
 {DETECTED_SIGNALS}
@@ -80,11 +80,11 @@ Return JSON:
   "product_name": "detected product name",
   "product_category": "detected category",
   "signals": {
-    "semantic_alignment": {"score": 0-100, "found": "what matches user prompts", "missing": "what doesn't match", "reasoning": "why this score based on Profound's criteria"},
-    "structured_data": {"score": 0-100, "found": "what schema/markup exists", "missing": "what's needed", "reasoning": "why — Profound favors FAQ schema over generic article"},
-    "content_structure": {"score": 0-100, "found": "heading/list/table counts", "missing": "structural gaps", "reasoning": "why — Profound measures heading density, paragraph balance"},
-    "query_fanout": {"score": 0-100, "found": "which fanout terms present", "missing": "which terms absent", "reasoning": "why — Profound found LLMs inject these terms into searches"},
-    "recency_freshness": {"score": 0-100, "found": "freshness signals detected", "missing": "freshness gaps", "reasoning": "why — Profound emphasizes content relevance to fast-evolving AI"}
+    "semantic_alignment": {"score": 0-100, "found": "what matches user prompts", "missing": "what doesn't match", "reasoning": "why this score based on AEO criteria"},
+    "structured_data": {"score": 0-100, "found": "what schema/markup exists", "missing": "what's needed", "reasoning": "why — FAQ schema is favored over generic article"},
+    "content_structure": {"score": 0-100, "found": "heading/list/table counts", "missing": "structural gaps", "reasoning": "why — AEO research measures heading density, paragraph balance"},
+    "query_fanout": {"score": 0-100, "found": "which fanout terms present", "missing": "which terms absent", "reasoning": "why — research found LLMs inject these terms into searches"},
+    "recency_freshness": {"score": 0-100, "found": "freshness signals detected", "missing": "freshness gaps", "reasoning": "why — AEO research emphasizes content relevance to fast-evolving AI"}
   },
   "overall_score": 0-100,
   "top_strengths": ["strength 1", "strength 2"],
@@ -147,7 +147,7 @@ Content Structure:
 - Questions (? marks): ${detected.questions}
 - Word count: ${detected.word_count}
 
-Query Fanout Terms (Profound: LLMs inject these into searches):
+Query Fanout Terms (research: LLMs inject these into searches):
 - "best": ${detected.has_best}
 - "top": ${detected.has_top}
 - "reviews": ${detected.has_reviews}

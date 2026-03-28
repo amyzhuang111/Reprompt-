@@ -119,11 +119,11 @@ export default function Home() {
       <div className="pt-8 text-center space-y-4">
         <h1 className="text-[32px] font-bold tracking-tight text-[var(--color-text-primary)]">AEO Page Auditor</h1>
         <p className="mx-auto max-w-2xl text-[15px] leading-relaxed text-[var(--color-text-secondary)]">
-          Profound tells you <span className="text-[var(--color-text-primary)] font-medium">who</span> is winning in AI search.
+          AI search tracking tells you <span className="text-[var(--color-text-primary)] font-medium">who</span> is winning.
           This tells you <span className="text-[var(--color-text-primary)] font-medium">why</span> — and what to fix.
         </p>
         <p className="mx-auto max-w-xl text-[13px] text-[var(--color-text-muted)]">
-          Audit any page against the 5 dimensions from Profound&apos;s AEO Content Score — trained on millions of top-cited pages.
+          Audit any page against the 5 AEO Content Score dimensions — trained on millions of top-cited pages.
         </p>
       </div>
 
@@ -185,10 +185,10 @@ export default function Home() {
       <div className="mx-auto max-w-3xl rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)] p-4 space-y-2">
         <p className="text-[10px] font-medium uppercase tracking-widest text-[var(--color-text-muted)]">How this works</p>
         <p className="text-[12px] leading-relaxed text-[var(--color-text-muted)]">
-          Profound tracks AI search <span className="text-[var(--color-text-secondary)]">outputs</span> — which brands get recommended.
-          This audits the <span className="text-[var(--color-text-secondary)]">input</span> — whether your page has the 5 dimensions that Profound&apos;s AEO Content Score identifies as driving AI citations.
-          Scores are heuristic approximations of Profound&apos;s 5 AEO Content Score dimensions (semantic alignment, structured data, content structure, query fanout, recency).
-          Profound&apos;s actual scores use proprietary ML trained on millions of pages — our heuristics count observable signals as a proxy.
+          Industry research tracks AI search <span className="text-[var(--color-text-secondary)]">outputs</span> — which brands get recommended.
+          This audits the <span className="text-[var(--color-text-secondary)]">input</span> — whether your page has the 5 dimensions that the AEO Content Score identifies as driving AI citations.
+          Scores are heuristic approximations of the 5 AEO Content Score dimensions (semantic alignment, structured data, content structure, query fanout, recency).
+          The full AEO Content Score uses proprietary ML trained on millions of pages — our heuristics count observable signals as a proxy.
         </p>
       </div>
     </div>
@@ -319,7 +319,7 @@ function CompareResult({ yours, competitor }: { yours: AuditResult; competitor: 
 function SignalGrid({ signals }: { signals: Record<string, SignalDetail> }) {
   return (
     <div className="space-y-2">
-      <p className="text-[10px] font-medium uppercase tracking-widest text-[var(--color-text-muted)]">5 AEO Content Dimensions (heuristic approximation of Profound&apos;s AEO Content Score)</p>
+      <p className="text-[10px] font-medium uppercase tracking-widest text-[var(--color-text-muted)]">5 AEO Content Dimensions (heuristic approximation of the AEO Content Score)</p>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {Object.entries(signals).map(([key, signal]) => (
           <div key={key} className="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-card)] p-4 space-y-2">

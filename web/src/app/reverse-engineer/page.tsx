@@ -753,7 +753,7 @@ export default function ReverseEngineerPage() {
                   When users ask informational questions about {category}, ChatGPT inserts unsolicited product recommendations {unsolicited.rate}% of the time.
                 </p>
                 <p className="text-[11px] text-[var(--color-text-muted)]">
-                  Profound benchmark: 15-28% overall (per their LinkedIn research on 100k shopping prompts, Sep 2025 → Jan 2026)
+                  Industry benchmark: 15-28% overall (per published research on 100k shopping prompts, Sep 2025 → Jan 2026)
                 </p>
               </div>
             </div>

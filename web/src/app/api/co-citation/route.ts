@@ -6,7 +6,7 @@ export const maxDuration = 60;
 
 const CO_CITATION_PROMPT = `You are an AI Search expert analyzing a brand's content for co-citation cluster positioning.
 
-CONTEXT: Profound's research on 700,000+ ChatGPT conversations found that citations travel in packs — sources appear together in predictable "co-citation clusters":
+CONTEXT: Research on 700,000+ ChatGPT conversations found that citations travel in packs — sources appear together in predictable "co-citation clusters":
 
 - Personal Finance: NerdWallet + The Points Guy co-cite at 14% rate. Cluster: NerdWallet, The Points Guy, Bankrate, Credit Karma
 - Tech/Electronics: The Verge + TechRadar co-cite at 10%. Cluster: The Verge, TechRadar, Tom's Guide, CNET, Wirecutter

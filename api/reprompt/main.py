@@ -8,7 +8,7 @@ from reprompt.routes import validate
 
 app = FastAPI(
     title="AEO Intelligence",
-    description="The optimization layer for AI search — built on Profound's research",
+    description="The optimization layer for AI search — built on AEO research",
     version="0.2.0",
 )
 

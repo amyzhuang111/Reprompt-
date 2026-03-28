@@ -217,17 +217,17 @@ export async function POST(req: NextRequest) {
 
 ${triggeredCount} out of ${totalQueries} informational queries about "${category}" triggered unsolicited product recommendations (${triggerRate}%).
 
-Profound's LinkedIn research found unsolicited recs grew from 15% to 28% between Sep 2025 and Jan 2026 (from their 100k prompt study). Compare this measured rate to that benchmark.
+Published research found unsolicited recs grew from 15% to 28% between Sep 2025 and Jan 2026 (from a 100k prompt study). Compare this measured rate to that benchmark.
 
 Provide analysis:
-1. How does this category's rate compare to Profound's overall findings?
+1. How does this category's rate compare to the overall research findings?
 2. What patterns do you see in WHICH queries triggered recs vs which didn't?
 3. What does this tell brands in this category?
 
 Return JSON:
 {
   "summary": "2-3 sentence summary of findings",
-  "benchmark_comparison": "how this rate compares to Profound's 15-28% range",
+  "benchmark_comparison": "how this rate compares to the 15-28% benchmark range",
   "pattern_insights": ["2-3 insights about which query types triggered recs"],
   "brand_implications": ["2-3 implications for brands in this category"]
 }

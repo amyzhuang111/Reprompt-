@@ -107,7 +107,7 @@ export default function CoCitationPage() {
         </p>
         <p className="mx-auto max-w-xl text-[13px] text-[var(--color-text-muted)]">
           &ldquo;Your competition isn&apos;t just for visibility. It&apos;s for context proximity to the category leader.&rdquo;
-          &mdash; Profound, 700k conversation study
+          &mdash; 700k conversation study
         </p>
       </div>
 
@@ -134,7 +134,7 @@ export default function CoCitationPage() {
           ))}
         </div>
         <p className="mt-2 text-center text-[10px] text-[var(--color-text-muted)]">
-          Top co-citation pair rates by vertical &mdash; Profound
+          Top co-citation pair rates by vertical &mdash; industry research
         </p>
       </div>
 

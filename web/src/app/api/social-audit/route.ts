@@ -33,9 +33,9 @@ function detectSignals(text: string) {
   };
 }
 
-// Platform-specific Profound research context
+// Platform-specific research context
 const PLATFORM_RESEARCH: Record<string, string> = {
-  reddit: `PROFOUND'S PUBLISHED FINDINGS ON REDDIT (from 4B citations + 300M responses, in collaboration with Reddit):
+  reddit: `PUBLISHED RESEARCH FINDINGS ON REDDIT (from 4B citations + 300M responses):
 - Reddit is #1 most-cited domain across all AI models (3.11%)
 - 99% of citations are individual threads, NOT subreddit pages
 - "AI does NOT index for upvotes or karma. It's a quality contest, not a popularity one."
@@ -47,14 +47,14 @@ const PLATFORM_RESEARCH: Record<string, string> = {
 - Niche subreddits treated as Subject Matter Experts (r/whatcarshouldIbuy, r/BuyItForLife)
 - For purchase intent, AI often prioritizes niche subreddits OVER official brand sites
 
-Score these Reddit-specific signals based on Profound's findings:
+Score these Reddit-specific signals based on published research:
 1. QUESTION-RESPONSE FRAMEWORK: Does this follow "specific problem → direct solutions"?
 2. HELPFULNESS SIGNALS: Specific details, named products, concrete advice, personal experience with outcomes
 3. AUTHENTIC TONE: Genuine/conversational vs sales-y? Balanced/honest vs pure praise?
 4. SPECIFICITY & DETAIL: Named products, prices, measurements, comparison data, personal experience
 5. EVERGREEN VALUE: Will this still be useful in 12 months? (avg cited post = 1 year old)`,
 
-  linkedin: `PROFOUND'S PUBLISHED FINDINGS ON LINKEDIN (from 1.4M citations across 6 AI platforms):
+  linkedin: `PUBLISHED RESEARCH FINDINGS ON LINKEDIN (from 1.4M citations across 6 AI platforms):
 - LinkedIn is #1 most-cited domain for professional queries across ALL 6 AI platforms
 - LinkedIn rose from #11 to #5 on ChatGPT in 3 months (Nov 2025 → Feb 2026)
 - Posts + articles grew from 27% to 35% of all LinkedIn citations (profiles declining: 34% → 15%)
@@ -62,14 +62,14 @@ Score these Reddit-specific signals based on Profound's findings:
 - AI engines "increasingly draw from on-platform published content" over profile pages
 - "Posts should be treated as a citation surface, not just engagement content"
 
-Score these LinkedIn-specific signals based on Profound's findings:
+Score these LinkedIn-specific signals based on published research:
 1. PUBLISHED CONTENT VALUE: Is this substantive published content AI could cite? (posts+articles = 35% of citations)
 2. PROFESSIONAL AUTHORITY: Does this demonstrate professional expertise? (LinkedIn = #1 for professional queries)
 3. DATA & SPECIFICITY: Specific numbers, data, research references? (data-backed claims drive citation)
 4. CITATION-EXTRACTABLE FORMAT: Can AI extract a clean snippet? Structured, scannable?
 5. POSTING CADENCE FIT: Does this contribute to consistent posting? ("cadence matters as much as profile completeness")`,
 
-  youtube: `PROFOUND'S PUBLISHED FINDINGS ON YOUTUBE (from ~700K social platform citations):
+  youtube: `PUBLISHED RESEARCH FINDINGS ON YOUTUBE (from ~700K social platform citations):
 - 85.4% of YouTube citations are SPECIFIC VIDEOS (channels: 5.3%, playlists: 3.4%)
 - "Channel-level authority matters less than individual video optimization"
 - "Title, description, and content structure drive citations"
@@ -78,7 +78,7 @@ Score these LinkedIn-specific signals based on Profound's findings:
 - YouTube is NOT in ChatGPT's top 10 cited domains
 - Different AI platforms treat YouTube very differently
 
-Score these YouTube-specific signals based on Profound's findings:
+Score these YouTube-specific signals based on published research:
 1. VIDEO-LEVEL OPTIMIZATION: Title clarity, description depth (85.4% of citations = specific videos)
 2. DESCRIPTION STRUCTURE: Timestamps, sections, key takeaways (title+description = citation surface)
 3. SEARCHABLE SPECIFICITY: Specific products, specs, comparisons (matches AI search queries)
@@ -112,53 +112,53 @@ const SIGNAL_LABELS: Record<string, Record<string, string>> = {
 
 const SIGNAL_WHY: Record<string, Record<string, string>> = {
   reddit: {
-    question_response: "Profound: \"The most impactful content follows a specific problem followed by direct solutions.\"",
-    helpfulness: "Profound: \"AI does NOT index for upvotes or karma. Models seek semiotic cues of helpfulness.\"",
-    authentic_tone: "Profound: \"Models prioritize genuine, conversational language and filter out sales-y content.\"",
-    specificity_detail: "Profound: Threads with \"detailed answers, personal experience, product comparisons\" get cited.",
-    evergreen_value: "Profound: \"Average cited post is one year old. AI builds a durable, long-term knowledge base.\"",
+    question_response: "Research: \"The most impactful content follows a specific problem followed by direct solutions.\"",
+    helpfulness: "Research: \"AI does NOT index for upvotes or karma. Models seek semiotic cues of helpfulness.\"",
+    authentic_tone: "Research: \"Models prioritize genuine, conversational language and filter out sales-y content.\"",
+    specificity_detail: "Research: Threads with \"detailed answers, personal experience, product comparisons\" get cited.",
+    evergreen_value: "Research: \"Average cited post is one year old. AI builds a durable, long-term knowledge base.\"",
   },
   linkedin: {
-    published_content_value: "Profound: Posts + articles grew from 27% to 35% of all LinkedIn citations.",
-    professional_authority: "Profound: LinkedIn is #1 most-cited domain for professional queries across ALL 6 AI platforms.",
-    data_specificity: "Profound's own posts get cited because they include specific stats and original research.",
+    published_content_value: "Research: Posts + articles grew from 27% to 35% of all LinkedIn citations.",
+    professional_authority: "Research: LinkedIn is #1 most-cited domain for professional queries across ALL 6 AI platforms.",
+    data_specificity: "Posts with specific stats and original research get cited more frequently.",
     citation_extractable: "AI needs to extract a clean, citable snippet from structured content.",
-    posting_cadence: "Profound: \"Posting cadence now matters as much as profile completeness.\"",
+    posting_cadence: "Research: \"Posting cadence now matters as much as profile completeness.\"",
   },
   youtube: {
-    video_optimization: "Profound: \"85.4% of citations are specific videos. Channel authority matters less than individual video optimization.\"",
-    description_structure: "Profound: \"Title, description, and content structure drive citations.\"",
-    searchable_specificity: "Profound: YouTube citations go to specific, searchable videos with detailed content.",
-    cross_platform_appeal: "Profound: YouTube is #1 on Gemini (18.8% of top-10), strong on Perplexity (13.9%), weak on ChatGPT.",
+    video_optimization: "Research: \"85.4% of citations are specific videos. Channel authority matters less than individual video optimization.\"",
+    description_structure: "Research: \"Title, description, and content structure drive citations.\"",
+    searchable_specificity: "Research: YouTube citations go to specific, searchable videos with detailed content.",
+    cross_platform_appeal: "Research: YouTube is #1 on Gemini (18.8% of top-10), strong on Perplexity (13.9%), weak on ChatGPT.",
     standalone_value: "AI cites descriptions without watching. Self-contained descriptions are independently valuable.",
   },
 };
 
-const AUDIT_PROMPT = `You are scoring social media content for AI citation potential using ONLY Profound's published research findings. Do NOT invent criteria — use only what Profound has published.
+const AUDIT_PROMPT = `You are scoring social media content for AI citation potential using ONLY published research findings. Do NOT invent criteria — use only what published research has established.
 
 {PLATFORM_RESEARCH}
 
 You have REAL detected signals from the content (factual counts):
 {DETECTED_SIGNALS}
 
-Score each signal 0-100 based on the detected data and Profound's published findings. Reference the specific Profound finding that justifies each score.
+Score each signal 0-100 based on the detected data and published research findings. Reference the specific research finding that justifies each score.
 
 IMPORTANT: Use EXACTLY these signal keys in your response (they must match exactly):
 {SIGNAL_KEYS}
 
 Return JSON:
 {
-  "platform_insights": "platform-specific insight from Profound's data",
+  "platform_insights": "platform-specific insight from research data",
   "signals": {
-    "exact_signal_key_from_above": {"score": 0-100, "found": "what's present", "improve": "what to add", "reasoning": "which Profound finding justifies this score"}
+    "exact_signal_key_from_above": {"score": 0-100, "found": "what's present", "improve": "what to add", "reasoning": "which research finding justifies this score"}
   },
   "overall_score": 0-100,
   "verdict": "one sentence",
   "sentence_analysis": [
-    {"original": "exact sentence", "assessment": "strong|weak|neutral", "reason": "based on Profound's findings", "rewrite": "improved version or null"}
+    {"original": "exact sentence", "assessment": "strong|weak|neutral", "reason": "based on research findings", "rewrite": "improved version or null"}
   ],
   "cross_platform": {
-    "chatgpt": {"relevance": "high|medium|low", "note": "based on Profound's platform data"},
+    "chatgpt": {"relevance": "high|medium|low", "note": "based on platform citation data"},
     "gemini": {"relevance": "high|medium|low", "note": "..."},
     "perplexity": {"relevance": "high|medium|low", "note": "..."}
   },
