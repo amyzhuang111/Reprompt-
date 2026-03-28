@@ -1,0 +1,96 @@
+🧠 What works well
+
+Live, query-driven insights:
+
+Sends real queries to ChatGPT and extracts actual brand recommendations.
+
+This is powerful because it’s dynamic and actionable, not just based on historical data.
+
+Leaderboard / brand ranking:
+
+Shows a clear “who wins” per category and query.
+
+Users immediately see competitive positioning at a glance.
+
+Query-level granularity:
+
+Shows per-query results, highlighting where your brand appears or is missing.
+
+Makes insights tangible and actionable.
+
+Recommendation rate metric:
+
+Quantifies exposure in AI answers—users can benchmark performance.
+
+⚠️ Weak points / gaps
+
+No explanation of why competitors win
+
+Shows ranking, but doesn’t tell users the content or signals driving ChatGPT recommendations.
+
+This overlaps with your Reverse-Engineer tool—but without integration, it’s just a scorecard.
+
+Limited to brands, not content patterns
+
+You know who’s winning, but not what content, structure, or keywords make them win.
+
+No predictive guidance
+
+Doesn’t simulate what would improve your brand rank or “likelihood of recommendation” if changes are applied.
+
+No visualization of gaps across queries
+
+Users see query-by-query results, but patterns or gaps aren’t highlighted visually.
+
+💎 How to make it “super-special” for Profound
+1. Integrate with Reverse-Engineer insights
+
+For each competitor ranking higher:
+
+Show which sentences, headers, phrases, or social signals likely caused them to be recommended.
+
+Turns raw ranking → actionable intelligence.
+
+2. Predictive / simulation layer
+
+Estimate what would happen if you implemented specific fixes:
+
+“Add problem-solution framing → expected +1 rank in 3 queries”
+
+“Include structured comparison table → AI may recommend your brand in 2 additional queries”
+
+3. Pattern visualization
+
+Heatmap showing query vs brand gaps.
+
+Quick visual cues:
+
+Green = strong
+
+Red = missing / low exposure
+
+4. Query coverage insights
+
+Highlight uncovered or weak queries where competitors dominate but your brand is absent.
+
+Suggest content or structure to capture these queries.
+
+5. Cross-category benchmarking
+
+Compare multiple categories at once.
+
+Show relative positioning of your brand across product verticals in AI recommendations.
+
+🔑 Key insight
+
+This module already overlaps with Profound’s standard tracking, which likely already knows “who is winning” in AI citations per category.
+
+✅ Differentiation comes from adding:
+
+“Why they’re winning” (pattern-level reasoning)
+
+“How to fix it / get recommended” (actionable simulation)
+
+Visualization of gaps across queries and brands
+
+Without this, it’s a nice report—but not a competitive moat.

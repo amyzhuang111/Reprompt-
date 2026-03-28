@@ -1,0 +1,52 @@
+⚠️ Weak points / gaps
+
+Static scoring:
+
+You’re giving a rating (e.g., Low Potential, 8/10), but it’s still mostly advisory.
+
+Profound could already have internal scoring for “rec readiness” behind the scenes.
+
+No automation of fixes:
+
+Tells you what to add, but doesn’t generate content or product narratives automatically.
+
+Granularity vs action:
+
+You mention “add descriptive product narrative / third-party validation,” but users might not know exactly how to implement it for AI citation.
+
+Cross-product / query simulation missing:
+
+Shows a single product example (sugar), but doesn’t simulate multiple scenarios or estimate likelihood of ChatGPT inserting the product.
+
+💎 How to make it “super-special” for Profound
+1. Simulate unsolicited recommendation likelihood
+
+Assign a probability score that estimates how likely ChatGPT will recommend the product in an informational query.
+
+Show “Before → After” if suggested changes are applied.
+
+2. Generate auto content improvements
+
+Instead of just telling “Add third-party validation / problem-solution framing,” generate:
+
+Example sentences, product narratives, scenario coverage snippets.
+
+Could even output ready-to-publish content that’s optimized for unsolicited AI recommendation.
+
+3. Scenario library
+
+Include multiple queries for each product type.
+
+Show which queries trigger recommendation and which don’t → insight into coverage gaps.
+
+4. Cross-product benchmarking
+
+Compare your product against top competitors in the same category for unsolicited recommendation likelihood.
+
+Makes it more actionable than a single “sugar” example.
+
+5. Visual / interactive output
+
+Radar chart or stacked bars showing strengths/weaknesses across the 6 signals.
+
+Clicking a signal shows concrete examples or text suggestions.
